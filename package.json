@@ -1,0 +1,10 @@
+{
+  "name": "gulp-express-livereload",
+  "main": "Gulpfile.js",
+  "devDependencies": {
+    "connect-livereload": "^0.5.2",
+    "express": "^4.10.6",
+    "gulp": "^3.8.10",
+    "tiny-lr": "^0.1.4"
+  }
+}
