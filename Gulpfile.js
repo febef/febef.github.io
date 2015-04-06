@@ -28,6 +28,7 @@ function notifyLiveReload(event) {
 }
 
 gulp.task('watch', function() {
+  gulp.watch('./*.html', notifyLiveReload);
   gulp.watch('./*.*', notifyLiveReload);
   gulp.watch('./**/*.js', notifyLiveReload);
   gulp.watch('./**/*.css', notifyLiveReload);
