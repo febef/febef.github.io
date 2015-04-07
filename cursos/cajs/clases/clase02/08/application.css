@@ -1,0 +1,14 @@
+/*
+    1 - Para los elementos con las clases de ng-invalid y ng-dirty asigar la propiedad de border-color con el valor red
+*/
+.ng-invalid.ng-dirty
+{
+ border-color: red; 
+}
+/*
+    2 - Para los elementos con las clases de ng-valid y ng-dirty asigar la propiedad de border-color con el valor green
+*/
+.ng-valid.ng-dirty
+{
+ border-color: green; 
+}

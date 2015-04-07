@@ -1,0 +1,60 @@
+﻿<!DOCTYPE html>
+<html ng-app="gemStore">
+<head>
+    <link rel="stylesheet" type="text/css" href="bootstrap.min.css" />
+    <script type="text/javascript" src="angular.min.js"></script>
+    <script type="text/javascript" src="app.js"></script>
+</head>
+<body class="list-group" ng-controller="StoreController as store">
+    <header>
+        <h1 class="text-center">Flatlander Crafted Gems</h1>
+        <h2 class="text-center">– an Angular store –</h2>
+    </header>
+    <div class="list-group-item" ng-repeat="product in store.products">
+        <h3>
+            {{product.name}}
+            <em class="pull-right">{{product.price | currency}}</em>
+        </h3>
+        <section ng-show="product.images.length">
+            <img ng-src="{{product.images[0]}}" />
+            <ul class="list-inline thumbs">
+                <li class="thumbnail" ng-repeat="image in product.images">
+                    <img ng-src="{{image}}" />
+                </li>
+            </ul>
+        </section>
+        <!-- 1 - Asociar el controlador TabController a elemento section de nuestro HTML con clase .tab, recordar utilizar un alias para el mismo -->
+        <section class="tab" ng-controller="TabController as tab">
+            <ul class="nav nav-pills">
+                <!-- 2 - Asignar el método de setTab a cada uno de los elementos <a> dentro del elemento <section> de nuestro HTML con la clase .tab,
+                    en cada elemento, enviar como valor el número del tab, en nuestro caso, 1, 2 y 3 -->
+                <!-- 4 - Asignar la clase active a cada elemento <li> cuando el tab asociado sea seleccionado -->
+                <li ng-class="{ active: tab.isSet(1) }">
+                    <a href ng-click="tab.setTab(1)">Description</a>
+                </li>
+                <li ng-class="{ active: tab.isSet(2) }">
+                    <a href ng-click="tab.setTab(2)">Specs</a>
+                </li>
+                <li ng-class="{ active: tab.isSet(3) }">
+                    <a href ng-click="tab.setTab(3)">Reviews</a>
+                </li>
+            </ul>
+            <!-- 3 - Asignar el método isSet a cada uno de los elementos <div> dentro de la sección <section> con la clase tab para mostrar sólamente el tab seleccionado -->
+            <div ng-show="tab.isSet(1)">
+                <h4>Description</h4>
+                <!-- 5 - Mostrar la descripción del producto -->
+                <blockquote>{{ product.description }}</blockquote>
+            </div>
+            <div ng-show="tab.isSet(2)">
+                <h4>Specs</h4>
+                <!-- 6 - Mostrar la propiedad shine del producto -->
+                <blockquote>Shine: {{product.shine}}</blockquote>
+            </div>
+            <div ng-show="tab.isSet(3)">
+                <h4>Reviews</h4>
+                <blockquote></blockquote>
+            </div>
+        </section>
+    </div>
+</body>
+</html>

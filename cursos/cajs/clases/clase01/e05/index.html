@@ -1,0 +1,33 @@
+﻿<!DOCTYPE html>
+<html ng-app="gemStore">
+<head>
+    <link rel="stylesheet" type="text/css" href="bootstrap.min.css" />
+    <script type="text/javascript" src="angular.min.js"></script>
+    <script type="text/javascript" src="app.js"></script>
+</head>
+<body ng-controller="StoreController as store">
+
+    <!--  Products Container  -->
+    <div class="list-group">
+        <!--  Product Container  -->
+        <div class="list-group-item" ng-repeat="product in store.products">
+            <h3>
+                {{product.name}}
+                <em class="pull-right">{{product.price | currency}}</em>
+            </h3>
+
+            <!-- Image Gallery  -->
+            <div ng-show="product.images.length">
+                <!-- Fail 1 Message -->
+                <div ng-show="product.images">
+                    <img class="img img-circle img-thumbnail center-block" ng-src="{{product.images[0]}}" />
+                    <ul class="clearfix">
+                        <li class="small-image pull-left thumbnail" ng-repeat="image in product.images"> <img ng-src="{{image}}" /> </li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</body>
+</html>
