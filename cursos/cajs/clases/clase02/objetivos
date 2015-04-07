@@ -1,0 +1,16 @@
+En este módulo verás:
+
+   > Formularios.
+   > Directiva ng-model.
+   > Directiva ng-submit.
+   > Clases de estilos .ng-invalid, .ng-valid y .ng-dirty.
+   > Validaciones de formularios.
+
+
+Al final de esta clase serás capaz de:
+
+   > Crear formularios para crear y modificar nuestros objetos o entidadesi
+   > Hacer uso del two-way binding mediante el uso de la Directiva ng-model.
+   > Enviar información de regreso a nuestro modelo a través de la Directiva ng-submit.
+   > Estilizar nuestros formularios modificando nuestras clases css.
+   > Validar nuestros formularios para prevenir el envío de información no válida a nuestro modelo.

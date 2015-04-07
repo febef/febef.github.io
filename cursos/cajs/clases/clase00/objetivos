@@ -1,0 +1,14 @@
+En este módulo verás:
+
+   > Módulos en AngularJS.
+   > Expresiones en AngularJS.
+   > Controladores en AngularJS.
+   > Directivas Propias nativas de AngularJS.
+
+
+Al final de esta clase serás capaz de:
+
+   > Crear Módulos y utilizarlos, agregándolos a nuestro HTML.
+   > Mostrar contenido dinámico en nuestro HTML mediante el uso de Expresiones.
+   > Crear Controladores y utilizarlos para darle comportamiento a nuestro sitio.
+
