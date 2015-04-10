@@ -651,6 +651,11 @@ h2 i[class^="icon-"], h2 i[class*=" icon-"], h2 i.fa {
   	}
 
 /* ROTATE WORDS */
+@-moz-document url-prefix(){
+  .rotate-words span{
+    margin-top: 10px ;
+  }
+}
 .rotate-words {
   display: inline-block; min-width: 180px; min-height: 34px; text-align: left; text-indent: 4px;
   }
