@@ -6,7 +6,6 @@
 
 		<title>Clase00 - Curso de AngularJS</title>
 
-
 		<meta name="apple-mobile-web-app-capable" content="yes" />
 		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
 
@@ -49,248 +48,54 @@
 					<section>
 						<h2>En esta clase veremos:</h2>
             <ol>
-               <li> Repaso de la clase anterior.</li>
-               <li> Directivas ng-class, ng-init, ng-src </li>
-               <li> Refactorización de código. </li>
+               <li> Directivas ng-class, ng-init, ng-src.</li>
+               <li> Implementacion de pestañas.</li>
+               <li> Refactorización de código.</li>
+               <li> Filtos nativos.</li>
+               <li> Crear un filtro propio</li>
             </ol>
 					</section>
       </section>
       <section>
-					<section>
-						<h2>Repaso</h2>
-            
-					</section>
-          <section>
-             <h2>Qué es?</h2>
-             <p>
-             <b>AngularJS</b> es un <i>framework</i> de JavaScript de código abierto, mantenido e impulsado por la gente de <a href="http://www.google.com">Google</a> desde sus comienzos alla por el 2009...<br>
-             Esta basado en la arquitectura <i>MVC</i> y nos encamina a realizar aplicaciones de tipo <i>SPA</i>.<br>
-             <small>De esta manera se facilita la creación de <i>tests</i> para nuestras aplicaciones, pero eso es algo que escapa de éste curso.</small>
-             </p>
-          </section>
-          <section>
-             <table>
-                <tr>
-                   <td style="vertical-align:middle;">
-                     <h2> MVC </h2> 
-                   </td>
-                   <td>
-                      <img style="border:0px;vertical-align: top;"  data-src="./img/mvc.png">
-                   </td>
-                </tr>
-              </table>
-              La sigla <b>MVC</b> refiere el patron de arquitectura de software Modelo Vista Controlador. La cual separa los datos, la logica de la interfaz de usuario y los eventos, comucinaciones. MVC nos propone organizarnos en estos tres componentes: modelo, vista y controlador.<br>
-              Esto nos ayuda a la reutilización de código facilitando la tarea de desarrollo de aplicaciones y su posterior mantenimiento.
+         <section>
+            directivas ya vistas
          </section>
          <section>
-            <span style="font-size: 50px;"><b> SPA</b></span> aplicaión de una sola página.
-            <p>
-               Se trata de una aplicación web que se ejecuta en una única página, logrando así una experiencia de usuario más cercana a una aplicación de escritorio.<br>
-               Las SPA surgieron de la necesidad de mejorar la experiencia de usuario, no más navegar por un engorroso sistema de enlaces.<br>
-               Estas realizan peticiones asíncronas al servidor en las que solo se trasmite la minima cantidad de informacion posible y luego se actualiza una porcirón de la página segun corresponda.
-            </p>
-          </section>
-          <section>
-             <h2>Página web Comun</h2>
-             <img data-src="./img/commonwebpage.png">
-          </section>
-          <section>
-             <h2>Página SPA</h2>
-             <img data-src="./img/angularwebpage.png">
-          </section>
-          <section>
-             <h3>Framework</h3>
-             <p>
-             La palabra inglesa "framework" (marco de trabajo) define, en términos
-             generales, un conjunto estandarizado de conceptos, prácticas y criterios para
-             enfocar un tipo de problemática particular que sirve como referencia, para
-             enfrentar y resolver nuevos problemas de índole similar.
-             </p>
-          </section>
-          <section>
-             <h3>MVC en AngularSJ</h3>
-             <ul>
-               <li>
-                  <b>Vistas > </b> Será el HTML y todo lo que represente datos o información. <br>
-               </li>
-               <li>
-                  <b>Controladores > </b> Se encargarán de la lógica de la aplicación y sobre todo de las
-                  llamadas "Factorías" y "Servicios" para mover datos contra servidores o memoria
-                  local en HTML5.<br>
-               </li>
-               <li>
-                  <b>Modelo de la vista > </b> En Angular el "Modelo" es algo más
-                  que el modelo de datos. Toda esa información, que es útil para el programador
-                  pero que no forma parte del modelo del negocio, es a lo que llamamos el "<b>scope</b>"
-                  que es el modelo en Angular.
-               </li>
-            </ul>
-          </section>
-				</section>
-
-				<section>
-					<section>
-               <h2>Que nos ofrece Angular?</h2>
-               Angular nos provee una serie de Herramientas y librerias útiles para el desarrollo de aplicaciones web.
-          </section>
-          <section>
-             <h3> Dos características fundamentales de AngularJS</h3>
-             <ul>
-                <li>
-                   <b>Client-side template</b>
-                   El sistema de plantillas en AngularJS es diferente del utilizado en otros frameworks.
-                   Por lo general, es el servidor el encargado de mezclar la plantilla con los datos y
-                   devolver el resultado al navegador. En AngularJS el servidor proporciona los
-                   contenidos estáticos (plantillas/vistas) y la información que se va a representar (modelo) y
-                   es el cliente el encargado de mezclar la información del modelo con la plantilla
-                   para generar la vista.
-                </li>
-                <li>
-                   <b>Data binding</b>
-                   Con AngularJS podemos sincronizar el modelo y la vista automáticamente
-                   utilizando ciertas directives del framework. Esta sincronización es bidireccional, es
-                   decir, la información se sincroniza tanto si cambia el valor en la vista como si lo
-                   hace el valor en el modelo.
-                </li>
-             <ul>
-				   </section>
-           <section>
-              <h2>Módulos/Dependencias</h2>
-              Siempre nos manejaremos con módulos, que vendrian hacer algo asi como nombre de espacios(namespaces), al crear una aplicación se genera un módulo principal.<br> AngualrJS tambíen nos brinda funcionalidades muy útiles las cuales declara en sus propios módulos. Para poder usar éstas funcionalidades debemos incluirlas al módulo que la usaremos. Dentro de los módulos éstas funcionalidades son encapsuladas en servicios.<br>
-           </section>
-           <section>
-              <h2> En general...</h2>
-              En AngularJS, si todo esta bien hecho, no deberíamos encontrar código JavaScript en las vistas (archivos html) ni código HTML en los modelos y controladores (archivos js).<br>
-              <img data-src="./img/htmlvsjs.png"><br>
-              Como se ve en la imagen existen componentes como las <i>Directivas</i>, <i>Expresiones</i> y <i>Filtros</i> son agregados a HTML de parte de AngularJS, que nos van a alegar el maquetado de las vistas.
-              Por otro lado tenemos los <i>Controladores</i>, las <i>Fabricas</i>, <i>Servicios</i> y los <i>Proveedores</i>.
-           </section>
-           <section>
-              <h2>Directives</h2>
-              Las Directivas son uno de los pies fundamentales de AngularJS, éstas extienden el lenguaje html dándole el comportamiento que deseemos. AngularJS posee un conjunto de Directivas, de las cuales ya vamos a hacer uso, también nos brinda la posibilidad de crear las nuestras. Las Directivas se pueden presentar en forma de atributo de un elemento html o como un nuevo elemento html.<br>
-              <br>
-              <small> Ejemplo de uso de las Directivas 'ng-controller' y 'ng-show':</small>
-              <pre><code data-trim contenteditable>
-<div ng-controller="appController as app" >
-   <span ng-show="!app.todobien" >Todo MAL!</span>
-</div>
-              </code></pre>
-
-           </section>
-           <section>
-              <h2>Expressions</h2>
-              Las Expreciones de AngularJS son como expresiones de JavaScript pero restringidas. Podemos hacer uso de ellas en cualquier parte de las vistas siempre y cuando esté dentro de algún <i>scope</i>. Las declararemos con llaves dobles: <i>{{expresión}}</i>.
-              <ul>
-                 <li>
-                    <b>Contexto:</b> Las expresiones son evaluadas contra un objeto <i>scope</i>.
-                 </li>
-                 <li>
-                    <b>Errores:</b> Si una expresión está indefinida y/o genera un error, en JavaScript se genera un 'ReferenceError' en cambio en las expresiones de AngularJS si no son válidas no se toman en cuenta, se pasan de largo.
-                 </li>
-                 <li>
-                    <b>No Tenemos:</b> Control de flujo, declaración de funciones ni expresiones regulares.
-                 </li>
-                 <li>
-                    <b>Filtros:</b> Por otro lado tenemos filtros!.
-                 </li>
-                 <h1></h1>
-                 <small> Para ejecutar código JavaScript más complejo hacerlo en un metodo de un controlador.</small>
-           </section>
-           <section>
-              <h2>Filters</h2>
-                 Los filtros nos permiten modificar el modo en el que se va a presentar la información al usuario.
-                 La utilización de los mismos es similar a las tuberias de Unix y tambíen se pueden encadenar varios de ellos:
-                 <pre><code data-trim contenteditable>
-{{ expresión | filtro1:argumento | filtro2:argumento1:argumento2 | filtro3 }}
-                 </code></pre>
-                 Donde expresión puede ser cualquier tipo de expresión de AngularJS, como una variable del $scope, y filtro el nombre del filtro que le queremos aplicar a la expresión seguido de sus argumentos.
-               
-           </section>
-           <section>
-              <h2>Services</h2>
-              Los Servicios son los encargados de comunicarse con el servidor para enviar y obtener información que después será tratada por los controladores para mostrarla en las vistas.<br>
-              Esta parte es más compleja de explicar con un ejemplo, por el momento nos basta con saber que los services se pueden dividir en tres categorías:
-              <i><b>services</b></i>, <i><b>factories</b></i> y <i><b>providers</b></i>.<br>
-              Uno de los Servicios incluidos en el framework es $resource, el cual nos permite encapsular la interacción con servicios RESTful sin tener que tratar directamente con las llamadas http.
-           </section>
-           <section>
-              <h2>Factories</h2>
-                    Las fábricas, son la forma que tenemos de encapsular funcionalidades concretas par poder usarlas en nuestros proyectos. Ya vamos a ver ejemplos prácticos de ellas más adelante.
-           </section>
-           <!--<section>-->
-              <!--<h2>Services<h2>-->
-           <!--</section>-->
-           <!--<section>-->
-              <!--<h2>Providers<h2>-->
-              
-           <!--</section>-->
-				</section>
-        <section>
-        <section>
-           <h2> Manos a la obra</h2>
-           Para crear una aplicación es necesario incluir, por supuesto, la libreria AngularJS y al menos una directiva ('ng-app') la cual generara el scope raiz, necesario para hacer cualquier cosa:
-           <pre><code data-trim contenteditable>
-&lt;!doctype html&gt;
-&lt;html&gt;
-   &lt;head&gt;
-      &lt;title&gt;AngularJS&lt;/title&gt;
-      &lt;script type="text/javascript" src="angular.min.js"&gt;&lt;/script&gt;
-   &lt;/head&gt;
-   &lt;body ng-app&gt;
-      &lt;h2&gt; Hola Mundo!&lt;/h2&gt;
-   &lt;/body&gt;
-&lt;/html&gt;
-           </code></pre>
-        </section>
-        <section>
-           <h4> Probando expresiones y la directiva 'ng-model'</h4>
-           <pre><code data-trim contenteditable>
-&lt;!doctype html&gt;
-&lt;html&gt;
-   &lt;head&gt;
-      &lt;title&gt;AngularJS&lt;/title&gt;
-      &lt;script type="text/javascript" src="angular.min.js"&gt;&lt;/script&gt;
-   &lt;/head&gt;
-   &lt;body ng-app&gt;
-      &lt;input type="text" placeholder="ingresa tu nombre"  ng-model="name"&gt;
-      &lt;h2&gt; Hola {{name}}!&lt;/h2&gt;
-   &lt;/body&gt;
-&lt;/html&gt;
-           </code></pre>
-           Podemos ver éste ejemplo en el siguiente link:
-           <a href="http://plnkr.co/edit/t77aR02BTstDA3YdvOek?p=preview">http://plnkr.co/edit/t77aR02BTstDA3YdvOek?p=preview</a>
-        </section>
-        <section>
-           <h4> Primer controlador + ng-checked</h4>
-           <small>index.html</small>
-           <pre><code data-trim contenteditable>
-&lt;body ng-app=&quot;miap&quot;&gt;
-   &lt;h1&gt;Tarea&lt;/h1&gt;
-   &lt;div ng-controller=&quot;CtrlTarea as tarea&quot;&gt;
-      &lt;h3&gt;&lt;input type=&quot;checkbox&quot; ng-checked=&quot;{{tarea.hecho}}&quot;&gt; {{tarea.nombre}}&lt;/h3&gt;
-      &lt;span&gt;{{tarea.descripcion}}&lt;/span&gt;
-   &lt;/div&gt;
-   &lt;script src=&quot;angular.js&quot;&gt;&lt;/script&gt;
-   &lt;script src=&quot;app.js&quot;&gt;&lt;/script&gt;
-&lt;/body&gt;
-           </code></pre>
-           <small>app.js</small>
-           <pre><code data-trim contenteditable>
-var unaTarea = { nombre: "Cocinar", hecho: false, descripcion: "Algo rico..."};
-angular.module('miap', [])
-   .controller('CtrlTarea', function() {
-      var vm = this;
-      vm.nombre = unaTarea.nombre;
-      vm.descripcion = unaTarea.descripcion;
-      vm.hecho = unaTarea.hecho;
-   });
-           </code></pre>
-           <br>
-           Podemos ver éste ejemplo en el siguiente link:
-           <a href="http://plnkr.co/edit/7FDVZGukB6wwLBVu7sM4?p=preview">http://plnkr.co/edit/7FDVZGukB6wwLBVu7sM4?p=preview</a>
-        </section>
+            ng-src y ng-init
+         </section>
+         <section>
+            ejemplo
+         </section>
+         <section>
+            ng-class
+         </section>
+         <section>
+            ejemplo ng-class
+         </section>
       </section>
-      
+      <section>
+         refactorizacion de codigo
+      </section>
+      <section>
+         <section>
+            filtros nativos
+            currency, date, oderBy, limitTo
+         </section>
+         <section>
+            ejemplo
+         </section>
+      </section>
+      <section>
+         <section>
+            crear un filtro
+         </section>
+         <section>
+            ejemplo 1
+         </section>
+         <section>
+            ejemplo 2
+         </section>
+      </section>
       </div>
 
 		</div>
