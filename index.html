@@ -68,12 +68,12 @@
                         <div class="col-md-4">
 
                            <h2 class="section-title"><span><i class="fa fa-book"></i>Links</span></h2>
-
-                           <ul>
+                           <span style="color:#00A04080;margin-left:80px">/* ... Nothing for the moment ... */</span>
+                           <!---ul>
                               <li>
                                  <a href="./cursos/cajs/"> Curso de AngularJS</a>
                               </li>
-                           </ul>
+                           </ul--->
 
                            <!--<h2 class="section-title"><span><i class="fa fa-twitter"></i>LATEST TWEETS</span></h2>-->
                            <!--<div id="latest-tweets" class="widget-twitter" data-twitterid="388393979672150017" data-tweet-count="1" data-include-retweets="false">-->
@@ -90,7 +90,7 @@
                              <div class="service color1">
                                  <i class="fa fa-html5"></i>
                                  <h4>Web Design</h4>
-                                 <p>I design website, simple, functional and nice looking. Easy to use, causing a inexpensive learning, and greater attractiveness. For this I use the newest and latest technologies.</p>
+                                 <p>I design website, simple, functional nice looking. Easy to use, causing a inexpensive learning, and greater attractiveness.</p>
                              </div>
                              <!-- service -->
                          </div>
@@ -107,8 +107,8 @@
                              <!-- service -->
                              <div class="service color3">
                                  <i class="fa fa-sitemap"></i>
-                                 <h4>System Management</h4>
-                                 <p>Configuration and starting point of a computer or computer network. Server Installation and maintenance.</p>
+                                 <h4>System Management & Infraestructure</h4>
+                                 <p>Server Installation and maintenance, Cloud Computing. Configuration and starting point of a computer or computer network.</p>
                              </div>
                              <!-- service -->
                          </div>
@@ -117,7 +117,7 @@
                              <div class="service color4">
                                  <i class="fa fa-rocket"></i>
                                  <h4>Technical</h4>
-                                 <p>I have strong technical skills and vast experience. Always good idea to have a technician near to.</p>
+                                 <p>I have strong Technical skills and vast experience. Always good idea to have a technician near to.</p>
                              </div>
                              <!-- service -->
                          </div>
@@ -200,8 +200,8 @@
                                 <img src="./img/avatar.jpg" alt="stamp">
                               </div>
                               <div class="letter-info">
-                                  <p><i class="fa fa-at"></i>fexbef@gmail.com</p>
-                                  <p><i class="fa fa-at"></i>fb@sinaptica.io</p>
+                                  <p><i class="fa fa-at"></i>febef.dev@gmail.com</p>
+                                  <p><i class="fa fa-at"></i>facundo.beltramo@initconsultants.com</p>
                                   <p><i class="fa fa-phone"></i>+549 0341 5801243</p>
                                   <p><i class="fa fa-globe"></i>Rosario, Santa Fe, Argentina</p>
                               </div>
@@ -250,8 +250,14 @@
                             <!-- SOCIAL -->
                             <h2 class="section-title"><span><i class="fa fa-map-marker"></i>LOCATION</span></h2>
                             <!-- GOOGLE MAP -->
-                            <div class="map">
-                              <script type="text/javascript" src="https://maps.google.com/maps/api/js?sensor=false"></script><div style="overflow:hidden;height:350px;width:536px;"><div id="gmap_canvas" style="height:350px;width:536px;"></div><style>#gmap_canvas img{max-width:none!important;background:none!important}</style><a class="google-map-code" href="http://wordpress-themes.org" id="get-map-data">wordpress-themes.org</a></div><script type="text/javascript"> function init_map(){var myOptions = {zoom:10,center:new google.maps.LatLng(-32.9507408,-60.66650010000001),mapTypeId: google.maps.MapTypeId.ROADMAP};map = new google.maps.Map(document.getElementById("gmap_canvas"), myOptions);marker = new google.maps.Marker({map: map,position: new google.maps.LatLng(-32.9507408, -60.66650010000001)});infowindow = new google.maps.InfoWindow({content:"<b>Facundo Beltramo</b><br/><br/> Rosario" });google.maps.event.addListener(marker, "click", function(){infowindow.open(map,marker);});}google.maps.event.addDomListener(window, 'load', init_map);</script>
+                            <div class="map"  style="width:56px;">
+                              <script type="text/javascript" src="https://maps.google.com/maps/api/js?sensor=false"></script>
+                              <div style="overflow:hidden !important;height:350px;width:536px;">
+                                <div id="gmap_canvas" style="height:350px;width:536px;"></div>
+                                <style>#gmap_canvas img{max-width:none!important;background:none!important}</style>
+                                <a class="google-map-code" href="http://wordpress-themes.org" id="get-map-data">wordpress-themes.org</a>
+                              </div>
+                              <script type="text/javascript"> function init_map(){var myOptions = {zoom:10,center:new google.maps.LatLng(-32.9507408,-60.66650010000001),mapTypeId: google.maps.MapTypeId.ROADMAP};map = new google.maps.Map(document.getElementById("gmap_canvas"), myOptions);marker = new google.maps.Marker({map: map,position: new google.maps.LatLng(-32.9507408, -60.66650010000001)});infowindow = new google.maps.InfoWindow({content:"<b>Facundo Beltramo</b><br/><br/> Rosario" });google.maps.event.addListener(marker, "click", function(){infowindow.open(map,marker);});}google.maps.event.addDomListener(window, 'load', init_map);</script>
                             </div>
                             <!-- GOOGLE MAP -->
                     </div>
@@ -275,6 +281,7 @@
                <div class="content">
                   <!-- CONTENT -->
                   <!-- row -->
+                  <br/>
                   <div class="row">
                       <!-- col 6/12 -->
                       <div class="col-md-6">
@@ -282,6 +289,26 @@
                           <div class="timeline">
                               <h2><i class="fa fa-flask"></i>WORK HISTORY</h2>
                               <div class="event current">
+                                  <span class="date">2018</span>
+                                  <h4>Infraestructure, devops and Developer</h4>
+                                  <h5><a href="http://initconsultants.com">InitConsultants.</a></h5>
+                                  <p>I currently work for InitConsultants. I'm full-stack web developer.</p>
+                                  <p> I maintain and arm software infrastructures. I usually work on AWS. I love what I do.</p>                              </div>
+                              <div class="event">
+                                  <span class="date">2017</span>
+                                  <h4>Help Desk & Trainer</h4>
+                                  <h5><a href="http://initconsultants.com">Init Consultants .</a></h5>
+                                  <p>Enter the company for a help desk position in which I assisted several clients. Both personally, via telephone, livechatinc, teamviewer and videoconference.</p>
+                                  <p>I gave training courses on the tools offered.</p>
+                              </div>
+                              <div class="event">
+                                  <span class="date">2016</span>
+                                  <h4>Technical Sound & Lights and maintenance </h4>
+                                  <h5><a href="https://www.facebook.com/TEATROCARASYCARETAS/">Caras y Caretas.</a></h5>
+                                  <p>I worked as a band soundman, and shows. To himself as an illuminator of the events carried out in the theater.</p>
+                                  <p>I was also in charge of the maintenance of it.</p>
+                              </div>
+                              <div class="event">
                                   <span class="date">2015</span>
                                   <h4>Full-Stack Developer</h4>
                                   <h5><a href="https://sinaptica.io">Sinaptica Labs.</a></h5>
@@ -306,7 +333,7 @@
                                   <span class="date">2011</span>
                                   <h4>Technical</h4>
                                   <h5><a href="/">Ingeniería Steel</a></h5>
-                                  <p>I worked as technical in Ingenieria Steel for a year. I served as installer and repairer of networks, equipment and computers.i</p>
+                                  <p>I worked as Technical in Ingenieria Steel for a year. I served as installer and repairer of networks, equipment and computers.i</p>
                               </div>
                               <div class="event">
                                   <span class="date">2009</span>
@@ -358,12 +385,13 @@
                         <!-- col 6/12 -->
                         <!-- col 6/12 -->
                         <div class="col-md-6">
+                           <br/>
                            <h2 class="section-title"><span><i class="fa fa-code"></i>DEVELOPMENT SKILLS</span></h2>
                            <!-- DEV SKILLS -->
                            <div class="skillset">
                                <!-- .skill-unit -->
                                <div class="skill-unit">
-                                   <h4>WebAppDev: HTML5/CSS3/MEANStack/Bootstrap/JQuery</h4>
+                                   <h4>WebAppDev: HTML5/CSS3/NodeJS/Bootstrap/JQuery/CSS3/Pure Javascrip</h4>
                                    <div class="bar" data-percent="88">
                                        <div class="progress progress-bar progress-bar-success progress-bar-striped" style="width: 88%;"></div>
                                    </div>
@@ -371,17 +399,29 @@
                                <!-- .skill-unit -->
                                <!-- .skill-unit -->
                                <div class="skill-unit">
-                                   <h4>System Admin: GNU-Linux/DebianServer/Networking</h4>
-                                   <div class="bar" data-percent="77">
+                                   <h4>Programing: JS/C/C++/Bash/PHP/Haskel/Batch/Lua/VB6/PHP...</h4>
+                                   <div class="bar" data-percent="80">
+                                       <div class="progress progress-bar progress-bar-success progress-bar-striped" style="width: 80%;"></div>
+                                   </div>
+                               </div>
+                               <!-- .skill-unit -->
+                           </div> 
+                           <h2 class="section-title"><span><i class="fa fa-code"></i>INFRAESTUCTURE IT SKILLS</span></h2>
+                           <!-- INFA SKILLS -->
+                           <div class="skillset">
+                               <!-- .skill-unit -->
+                               <div class="skill-unit">
+                                   <h4>System Admin: GNU-Linux/Servers/Networking/devops</h4>
+                                   <div class="bar" data-percent="80">
                                        <div class="progress progress-bar progress-bar-success progress-bar-striped" style="width: 77%;"></div>
                                    </div>
                                </div>
                                <!-- .skill-unit -->
                                <!-- .skill-unit -->
                                <div class="skill-unit">
-                                   <h4>Programing: JS/C/C++/Bash/PHP/Haskel/Batch/Lua/VB6...</h4>
-                                   <div class="bar" data-percent="80">
-                                       <div class="progress progress-bar progress-bar-success progress-bar-striped" style="width: 80%;"></div>
+                                   <h4>AWS Services: ECS/ECS/snapshots/amis/IAM/Route53/RDS/VPS/etc..</h4>
+                                   <div class="bar" data-percent="50">
+                                       <div class="progress progress-bar progress-bar-success progress-bar-striped" style="width: 45%;"></div>
                                    </div>
                                </div>
                                <!-- .skill-unit -->
@@ -427,14 +467,14 @@
                                <!-- .skill-unit -->
                            </div>
                            <!-- DESIGN SKILLS -->
-                           <h2 class="section-title"><span><i class="fa fa-arrow-circle-down"></i>DOWNLOAD MY CV</span></h2>
-                           <p>You can download my CV in pdf format if you like</p>
+                           <!-- h2 class="section-title"><span><i class="fa fa-arrow-circle-down"></i>DOWNLOAD MY CV</span></h2>
+                           <p>You can download my CV in pdf format if you like</p -->
                            <!-- DOWNLOAD BUTTON -->
-                           <center>
+                           <!-- center>
                               <div class="download-button">
                                   <a href="#" class="button primary">DOWNLOAD CV</a>
                               </div>
-                           </center>
+                           </center-->
 
 
                            <!-- DOWNLOAD BUTTON -->
