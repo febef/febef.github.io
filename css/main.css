@@ -2618,7 +2618,9 @@ a:hover {
 
 /* Text Selection */
 ::selection {
-   text-shadow: none; color: #333; background: #FFFFCF;
+   text-shadow: none;
+   color: #333;
+   background: #000000ed;
   }
 ::-moz-selection {
    text-shadow: none; color: #333; background: #FFFFCF;
