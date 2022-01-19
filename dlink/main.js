@@ -5,6 +5,6 @@ var dl = new DataLink();
 
 var model = {}
 
-var app = docuement.getElementById("app");
+var app = document.getElementById("app");
 
 dl.linker(app, model);
